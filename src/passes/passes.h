@@ -53,6 +53,7 @@ Pass* createEncloseWorldPass();
 Pass* createExtractFunctionPass();
 Pass* createExtractFunctionIndexPass();
 Pass* createFlattenPass();
+Pass* createFixFunctionBitcastsPass();
 Pass* createFuncCastEmulationPass();
 Pass* createFullPrinterPass();
 Pass* createFunctionMetricsPass();

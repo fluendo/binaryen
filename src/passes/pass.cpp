@@ -171,6 +171,11 @@ void PassRegistry::registerPasses() {
                createExtractFunctionIndexPass);
   registerPass(
     "flatten", "flattens out code, removing nesting", createFlattenPass);
+  registerPass(
+    "fix-function-bitcasts",
+    "surgically fixes indirect call type mismatches by generating per-site "
+    "thunks, without a global ABI change (alternative to fpcast-emu)",
+    createFixFunctionBitcastsPass);
   registerPass("fpcast-emu",
                "emulates function pointer casts, allowing incorrect indirect "
                "calls to (sometimes) work",
